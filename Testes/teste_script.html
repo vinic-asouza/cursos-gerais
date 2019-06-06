@@ -1,0 +1,22 @@
+<html>
+
+<body>
+
+    <input type="text" id="campo" />
+
+    <div id="campoDoCalculo">
+
+    </div>
+
+    <script>
+        var texto = document.getElementById("campo");
+        var campoDoCalculo = document.getElementById("campoDoCalculo")
+
+        //evento dispara quando retira o foco do campo texto
+        texto.onblur = function () {
+            campoDoCalculo.innerHTML = "<p>" + texto.value + "</p>";
+        }
+    </script>
+</body>
+
+</html>
