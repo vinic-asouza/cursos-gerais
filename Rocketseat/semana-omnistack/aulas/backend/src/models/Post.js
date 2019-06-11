@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+//REPRESENTACAO DA TABELA NO BANCO DE DADOS
+
 const PostSchema = new mongoose.Schema({
     author: String,
     place: String,
