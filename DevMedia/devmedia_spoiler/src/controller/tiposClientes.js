@@ -3,7 +3,7 @@ const TipoCliente = require('../model/tiposClientes');
 exports.findOne = (request, response, next) => {
     const tcl_id = request.params.tcl_id;
 
-    TipoCliente.findById(tcl_id)
+    TipoCliente.findByPk(tcl_id)
         .then(tipo_cliente => {
             if (tipo_cliente) {
                 response.send(spoiler);
@@ -49,7 +49,7 @@ exports.atualizar = (request, response, next) => {
 
     const tcl_descricao = request.body.tcl_descricao;
 
-    TipoCliente.findById(tcl_id)
+    TipoCliente.findByPk(tcl_id)
         .then(tipos_clientes => {
             if (tipos_clientes) {
                 TipoCliente.update(
@@ -72,7 +72,7 @@ exports.atualizar = (request, response, next) => {
 exports.excluir = (request, response, next) => {
     const tcl_id = request.param.tcl_id;
 
-    TipoCliente.findById(tcl_id)
+    TipoCliente.findByPk(tcl_id)
         .then(tipos_clientes => {
             if (tipos_clientes) {
                 TipoCliente.destroy({

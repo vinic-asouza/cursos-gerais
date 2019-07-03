@@ -12,7 +12,7 @@ const upload = multer(uploadConfig);
 
 //ROTAS GET E POST PARA ENVIO E LISTAGEM
 routes.get('/posts', PostController.index);
-routes.post('/posts', upload.single('image'), PostController.store);
+
 
 //ROTA PARA LIKES
 routes.post('/posts/:id/like', LikeController.store);

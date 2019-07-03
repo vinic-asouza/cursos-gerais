@@ -6,7 +6,7 @@ const fs = require('fs');
 module.exports = {
     //LISTAR POSTS ORDENADOS POR CREATAT (DATA DE CRIACAO)
     async index(req, res) {
-       const posts = await Post.find().sort('-createAt');
+       const posts = await Post.find().sort('createAt');
 
        return res.json(posts);
     },
